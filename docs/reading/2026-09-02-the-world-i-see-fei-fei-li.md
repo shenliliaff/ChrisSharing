@@ -2,8 +2,8 @@
 title: 从 ImageNet 到生成式 AI：读《我看见的世界》
 date: 2026-09-02
 category:
-	- 阅读
-	- 人工智能
+  - 阅读
+  - 人工智能
 order: -1
 ---
 
