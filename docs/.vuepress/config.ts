@@ -23,7 +23,7 @@ export default defineUserConfig({
   templateBuild: "./docs/.vuepress/templateBuild.html",
 
   // 禁止临时文件夹生成静态文件，参考 [VuePress 文档]（https://v2.vuepress.vuejs.org/zh/guide/page.html#routing）
-  pagePatterns: ["**/*.md", "!_temp/**", "!**/_*.md", "!.vuepress/**", "!node_modules/**"],
+  pagePatterns: ["**/*.md", "!reading/**/*", "!_temp/**", "!**/_*.md", "!.vuepress/**", "!node_modules/**"],
 
   // 如需 Google Analytics，请取消注释并填入自己的 Measurement ID：
   // plugins: [googleAnalyticsPlugin({ id: "G-XXXXXXXXXX" })],
