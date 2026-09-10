@@ -1,4 +1,4 @@
-import { webpackBundler } from "@vuepress/bundler-webpack";
+import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 
 import theme from "./theme.js";
@@ -27,8 +27,5 @@ export default defineUserConfig({
 
   // 如需 Google Analytics，请取消注释并填入自己的 Measurement ID：
   // plugins: [googleAnalyticsPlugin({ id: "G-XXXXXXXXXX" })],
-  bundler: webpackBundler({
-    postcss: {},
-    vue: {},
-  }),
+  bundler: viteBundler(),
 });

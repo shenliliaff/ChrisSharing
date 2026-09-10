@@ -17,10 +17,12 @@ for (const fileName of readdirSync(readingDir)) {
   const sourcePath = join(readingDir, fileName);
   const source = readFileSync(sourcePath, "utf8");
   const content = source.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n*/, "");
-  const permalink = `/reading-search/${basename(fileName, ".md")}.html`;
+  const articleName = basename(fileName, ".md");
+  const permalink = `/reading-search/${articleName}.html`;
+  const redirect = `/reading/index.html#/${articleName}`;
 
   writeFileSync(
     join(searchDir, fileName),
-    `---\nindex: false\narticle: false\npermalink: ${permalink}\n---\n\n${content}`,
+    `---\nindex: false\narticle: false\npermalink: ${permalink}\nhead:\n  - - meta\n    - http-equiv: refresh\n      content: "0; url=${redirect}"\n---\n\n${content}`,
   );
 }
