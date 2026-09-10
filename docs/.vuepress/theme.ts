@@ -142,6 +142,7 @@ export default hopeTheme(
       slimsearch: {
         // 索引全部内容
         indexContent: true,
+        hotReload: true,
       },
 
       feed: {

@@ -7,6 +7,6 @@ export default navbar([
   { text: "首页", icon: "fa6-solid:house", link: "/" },
   { text: "笔记", icon: "fa6-solid:book-open", link: "/notes/" },
   { text: "博客", icon: "fa6-solid:blog", link: "/blog" },
-  { text: "读书笔记", icon: "fa6-solid:book", link: "/reading/" },
+  { text: "读书笔记", icon: "fa6-solid:book", link: "/reading/index.html" },
   { text: "GitHub", icon: "fa6-brands:github", link: "https://github.com/shenliliaff/shenliliaff.github.io" },
 ]);

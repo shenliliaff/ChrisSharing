@@ -1,9 +1,11 @@
 ---
-home: true
-layout: BlogHome
 icon: fa6-solid:blog
 title: 博客
-heroText: 博客
-tagline: 记录思考与实践
-heroFullScreen: false
+article: false
 ---
+
+# 博客
+
+还没有正式发布的博客文章。
+
+这里会放一些偏实践的记录：项目复盘、工具使用、技术问题的来龙去脉。更随手的想法与资料整理，会先留在笔记和读书笔记里。

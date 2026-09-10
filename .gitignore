@@ -9,6 +9,7 @@
 **/.vuepress/dist/**
 
 # Generated Docsify reading-site copy
+docs/_reading-search/
 docs/.vuepress/public/reading/
 
 # 自定义草稿箱
