@@ -1,3 +1,4 @@
+- <a href="/reading/index.html" data-no-router>读书笔记</a>
 - <a href="/" data-no-router>fengsKB</a>
 - <a href="/blog.html" data-no-router>博客</a>
 - [GitHub](https://github.com/shenliliaff/shenliliaff.github.io)
