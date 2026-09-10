@@ -4,8 +4,39 @@
   <title>fengsKB</title>
   <subtitle>fengsKB 个人知识库</subtitle>
   <icon>https://shenliliaff.github.io/fengskb-icon.svg</icon>
-  <updated>2026-09-10T02:05:19.354Z</updated>
+  <updated>2026-09-10T07:15:57.874Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://shenliliaff.github.io/atom.xml"/>
   <link rel="alternate" href="https://shenliliaff.github.io/"/>
+  <entry>
+    <title type="text">Reading Search Sidebar Redirect</title>
+    <id>https://shenliliaff.github.io/superpowers/specs/2026-09-10-reading-search-sidebar-design.html</id>
+    <link href="https://shenliliaff.github.io/superpowers/specs/2026-09-10-reading-search-sidebar-design.html"/>
+    <updated>2026-09-10T07:15:12.000Z</updated>
+    <summary type="html"><![CDATA[
+<h2>Goal</h2>
+<p>Search results for reading notes must open the independent reading site so its
+reading-notes sidebar is displayed instead of the main site's notes sidebar.</p>
+<h2>Design</h2>
+<p><code>scripts/prepare-reading.mjs</code> will continue to generate <code>/reading-search/</code>
+pages so VuePress can index the reading-note content. Each generated page will
+also redirect the browser to the corresponding Docsify route:</p>]]></summary>
+    <content type="html"><![CDATA[
+<h2>Goal</h2>
+<p>Search results for reading notes must open the independent reading site so its
+reading-notes sidebar is displayed instead of the main site's notes sidebar.</p>
+<h2>Design</h2>
+<p><code>scripts/prepare-reading.mjs</code> will continue to generate <code>/reading-search/</code>
+pages so VuePress can index the reading-note content. Each generated page will
+also redirect the browser to the corresponding Docsify route:</p>
+<p><code>/reading/index.html#/&lt;article-file-name&gt;</code></p>
+<p>The generated page keeps its title and body so the VuePress search index remains
+unchanged. The redirect is client-side, allowing the search result to be
+indexed while sending a visitor to the reading site after they open it.</p>
+<h2>Validation</h2>
+<p>Run <code>pnpm docs:build</code> and inspect a generated reading-search page to verify it
+contains the expected Docsify route. The build must complete successfully.</p>
+]]></content>
+    <published>2026-09-10T07:15:12.000Z</published>
+  </entry>
 </feed>

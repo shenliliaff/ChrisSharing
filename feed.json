@@ -5,5 +5,17 @@
   "feed_url": "https://shenliliaff.github.io/feed.json",
   "description": "fengsKB 个人知识库",
   "favicon": "https://shenliliaff.github.io/fengskb-icon.svg",
-  "items": []
+  "items": [
+    {
+      "title": "Reading Search Sidebar Redirect",
+      "url": "https://shenliliaff.github.io/superpowers/specs/2026-09-10-reading-search-sidebar-design.html",
+      "id": "https://shenliliaff.github.io/superpowers/specs/2026-09-10-reading-search-sidebar-design.html",
+      "summary": "Reading Search Sidebar Redirect Goal Search results for reading notes must open the independent reading site so its reading-notes sidebar is displayed instead of the main site's...",
+      "content_html": "\n<h2>Goal</h2>\n<p>Search results for reading notes must open the independent reading site so its\nreading-notes sidebar is displayed instead of the main site's notes sidebar.</p>\n<h2>Design</h2>\n<p><code>scripts/prepare-reading.mjs</code> will continue to generate <code>/reading-search/</code>\npages so VuePress can index the reading-note content. Each generated page will\nalso redirect the browser to the corresponding Docsify route:</p>\n<p><code>/reading/index.html#/&lt;article-file-name&gt;</code></p>\n<p>The generated page keeps its title and body so the VuePress search index remains\nunchanged. The redirect is client-side, allowing the search result to be\nindexed while sending a visitor to the reading site after they open it.</p>\n<h2>Validation</h2>\n<p>Run <code>pnpm docs:build</code> and inspect a generated reading-search page to verify it\ncontains the expected Docsify route. The build must complete successfully.</p>\n",
+      "date_published": "2026-09-10T07:15:12.000Z",
+      "date_modified": "2026-09-10T07:15:12.000Z",
+      "authors": [],
+      "tags": []
+    }
+  ]
 }

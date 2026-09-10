@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://shenliliaff.github.io/rss.xsl"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <atom:link href="https://shenliliaff.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <title>fengsKB</title>
     <link>https://shenliliaff.github.io/</link>
     <description>fengsKB 个人知识库</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 10 Sep 2026 02:05:19 GMT</pubDate>
-    <lastBuildDate>Thu, 10 Sep 2026 02:05:19 GMT</lastBuildDate>
+    <pubDate>Thu, 10 Sep 2026 07:15:57 GMT</pubDate>
+    <lastBuildDate>Thu, 10 Sep 2026 07:15:57 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <item>
+      <title>Reading Search Sidebar Redirect</title>
+      <link>https://shenliliaff.github.io/superpowers/specs/2026-09-10-reading-search-sidebar-design.html</link>
+      <guid>https://shenliliaff.github.io/superpowers/specs/2026-09-10-reading-search-sidebar-design.html</guid>
+      <source url="https://shenliliaff.github.io/rss.xml">Reading Search Sidebar Redirect</source>
+      <description>Reading Search Sidebar Redirect Goal Search results for reading notes must open the independent reading site so its reading-notes sidebar is displayed instead of the main site&amp;apos;s...</description>
+      <pubDate>Thu, 10 Sep 2026 07:15:12 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>Goal</h2>
+<p>Search results for reading notes must open the independent reading site so its
+reading-notes sidebar is displayed instead of the main site's notes sidebar.</p>
+<h2>Design</h2>
+<p><code>scripts/prepare-reading.mjs</code> will continue to generate <code>/reading-search/</code>
+pages so VuePress can index the reading-note content. Each generated page will
+also redirect the browser to the corresponding Docsify route:</p>
+<p><code>/reading/index.html#/&lt;article-file-name&gt;</code></p>
+<p>The generated page keeps its title and body so the VuePress search index remains
+unchanged. The redirect is client-side, allowing the search result to be
+indexed while sending a visitor to the reading site after they open it.</p>
+<h2>Validation</h2>
+<p>Run <code>pnpm docs:build</code> and inspect a generated reading-search page to verify it
+contains the expected Docsify route. The build must complete successfully.</p>
+]]></content:encoded>
+    </item>
   </channel>
 </rss>
